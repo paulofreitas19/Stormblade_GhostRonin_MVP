@@ -9,6 +9,7 @@ public class PlayerRespawnController : MonoBehaviour
     [SerializeField] private PlayerLifePoints lifePoints;
     [SerializeField] private PlayerAnimationController animationController;
     [SerializeField] private PlayerInputReader inputReader;
+    [SerializeField] private CameraTargetController cameraTargetController;
 
     [Header("Respawn Points")]
     [SerializeField] private Transform initialRespawnPoint;
@@ -125,6 +126,9 @@ public class PlayerRespawnController : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
         rb.position = currentRespawnPoint.position;
+
+        if(cameraTargetController != null)
+            cameraTargetController.ResetAfterRespawn(currentRespawnPoint.position);
 
         health.ResetHealth();
 

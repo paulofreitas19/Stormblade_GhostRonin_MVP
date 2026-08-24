@@ -53,4 +53,15 @@ public class CameraTargetController : MonoBehaviour
         previousPlayerX = player.position.x;
 
     }
+
+    public void ResetAfterRespawn(Vector3 playerPosition)
+    {
+        targetX = playerPosition.x;
+
+        transform.position = new Vector3(targetX, fixedY, fixedZ);
+
+        previousPlayerX = playerPosition.x;
+
+        IsBlockingBackwardMovement = false;
+    }
 }
