@@ -1,37 +1,10 @@
 fileFormatVersion: 2
-guid: 4c4a3c03e1d6ead458b52fb10bde9225
+guid: 61a9f1a071a1d1742a4dfcc3cacda7d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8342490267423286198
-    second: player-crouch-attack-Sheet_0
-  - first:
-      213: -4295374666706683281
-    second: player-crouch-attack-Sheet_1
-  - first:
-      213: 3529908817020322415
-    second: player-crouch-attack-Sheet_2
-  - first:
-      213: -2972609759895498164
-    second: player-crouch-attack-Sheet_3
-  - first:
-      213: -8337053169054643811
-    second: player-crouch-attack-Sheet_4
-  - first:
-      213: -5397083212492800923
-    second: player-crouch-attack-Sheet_5
-  - first:
-      213: -8641884938328344942
-    second: player-crouch-attack-Sheet_6
-  - first:
-      213: -3380727071424018349
-    second: player-crouch-attack-Sheet_7
-  - first:
-      213: 6115136108521059621
-    second: player-crouch-attack-Sheet_8
-  - first:
-      213: -3773229269080648649
-    second: player-crouch-attack-Sheet_9
+      213: 5976151565899573200
+    second: player-novo-respawn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_0
+      name: player-novo-respawn_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,206 +115,294 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b32be3a2ba76c370800000000000000
-      internalID: 8342490267423286198
+      spriteID: 0d7a659af2e8fe250800000000000000
+      internalID: 5976151565899573200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_1
+      name: player-novo-respawn_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7445bf5be0aee3c41957d7fd4618f1e4
+      internalID: -2061367196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_2
       rect:
         serializedVersion: 2
         x: 40
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6a7cbd9f73c364c0800000000000000
-      internalID: -4295374666706683281
+      spriteID: b0454ce3ead3a734d920a7ba3fe6fb8a
+      internalID: 73621379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_2
+      name: player-novo-respawn_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac23b45554589d438bfd0195c7b302f
+      internalID: 1087068205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_4
       rect:
         serializedVersion: 2
         x: 80
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f620408ed51ccf030800000000000000
-      internalID: 3529908817020322415
+      spriteID: b3a89bdb177c2d14481f6c62393ccc3f
+      internalID: 1848616985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_3
+      name: player-novo-respawn_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369c1c1d18ad189468bd9caca463fd2b
+      internalID: -1630952862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_6
       rect:
         serializedVersion: 2
         x: 120
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c42d1954c2b2fb6d0800000000000000
-      internalID: -2972609759895498164
+      spriteID: 2524ecffd5464bc43acbc2ebc4879040
+      internalID: 662650692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_4
+      name: player-novo-respawn_7
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879f339af891d2e4d947ef18c6b521ac
+      internalID: 1593666898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_8
       rect:
         serializedVersion: 2
         x: 160
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d9904f87056dc4c80800000000000000
-      internalID: -8337053169054643811
+      spriteID: dca3325c447e33f46b7c000389608d5e
+      internalID: 128345323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_5
+      name: player-novo-respawn_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ffb98aaec226d4fad18af40af17969
+      internalID: 267317496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_10
       rect:
         serializedVersion: 2
         x: 200
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 56c7428c965b915b0800000000000000
-      internalID: -5397083212492800923
+      spriteID: 2f12303a863b30b46aa22ccbd48d6d7d
+      internalID: 2128069665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_6
+      name: player-novo-respawn_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 20
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cfa4c6d93e3174794d5f9eb5e0ebb4
+      internalID: 1533556281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-novo-respawn_12
       rect:
         serializedVersion: 2
         x: 240
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 296f32d6f6bd11880800000000000000
-      internalID: -8641884938328344942
+      spriteID: 15d9d587a388f174799f77305305475b
+      internalID: -1930832823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-crouch-attack-Sheet_7
+      name: player-novo-respawn_13
       rect:
         serializedVersion: 2
-        x: 280
+        x: 260
         y: 0
-        width: 40
-        height: 34
+        width: 20
+        height: 280
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3588931f3ae3511d0800000000000000
-      internalID: -3380727071424018349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-crouch-attack-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 525ff8d24e35dd450800000000000000
-      internalID: 6115136108521059621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-crouch-attack-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7345750a8fbc2abc0800000000000000
-      internalID: -3773229269080648649
+      spriteID: 37e31736bd222b24499f20b32750f626
+      internalID: 1279105434
       vertices: []
       indices: 
       edges: []
@@ -350,7 +411,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 28e9de83991163e4d9fbb196d8bc99e6
+    spriteID: bf2700b5408c02e4283dcc5bdf38726e
     internalID: 0
     vertices: []
     indices: 
@@ -360,18 +421,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":20.0,"y":280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      player-crouch-attack-Sheet_0: 8342490267423286198
-      player-crouch-attack-Sheet_1: -4295374666706683281
-      player-crouch-attack-Sheet_2: 3529908817020322415
-      player-crouch-attack-Sheet_3: -2972609759895498164
-      player-crouch-attack-Sheet_4: -8337053169054643811
-      player-crouch-attack-Sheet_5: -5397083212492800923
-      player-crouch-attack-Sheet_6: -8641884938328344942
-      player-crouch-attack-Sheet_7: -3380727071424018349
-      player-crouch-attack-Sheet_8: 6115136108521059621
-      player-crouch-attack-Sheet_9: -3773229269080648649
+      player-novo-respawn_0: 5976151565899573200
+      player-novo-respawn_1: -2061367196
+      player-novo-respawn_10: 2128069665
+      player-novo-respawn_11: 1533556281
+      player-novo-respawn_12: -1930832823
+      player-novo-respawn_13: 1279105434
+      player-novo-respawn_2: 73621379
+      player-novo-respawn_3: 1087068205
+      player-novo-respawn_4: 1848616985
+      player-novo-respawn_5: -1630952862
+      player-novo-respawn_6: 662650692
+      player-novo-respawn_7: 1593666898
+      player-novo-respawn_8: 128345323
+      player-novo-respawn_9: 267317496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

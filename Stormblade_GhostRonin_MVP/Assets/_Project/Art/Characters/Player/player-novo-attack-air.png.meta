@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: ff0eaea9cd2a53c4dac123864bc3c30a
+guid: b545578abdebaf7429eafc73d06a3fa6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8402819774039118711
-    second: player-death-Sheet_0
+      213: -7704391666933158151
+    second: player-novo-attack-air_0
   - first:
-      213: 647999314010606684
-    second: player-death-Sheet_1
+      213: 653135909854940434
+    second: player-novo-attack-air_1
   - first:
-      213: 8307123011071774300
-    second: player-death-Sheet_2
+      213: 1309093069897132201
+    second: player-novo-attack-air_2
   - first:
-      213: 8986735423822978805
-    second: player-death-Sheet_3
+      213: 6802603484304190537
+    second: player-novo-attack-air_3
+  - first:
+      213: 9201402680451274943
+    second: player-novo-attack-air_4
+  - first:
+      213: -2315220916111661539
+    second: player-novo-attack-air_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +115,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-death-Sheet_0
+      name: player-novo-attack-air_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98c25c08fef236b80800000000000000
-      internalID: -8402819774039118711
+      spriteID: 9fe28f93990841590800000000000000
+      internalID: -7704391666933158151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-death-Sheet_1
+      name: player-novo-attack-air_1
       rect:
         serializedVersion: 2
-        x: 30
+        x: 40
         y: 0
-        width: 30
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5c8c4e51f72ef800800000000000000
-      internalID: 647999314010606684
+      spriteID: 21d84f846a7601900800000000000000
+      internalID: 653135909854940434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-death-Sheet_2
+      name: player-novo-attack-air_2
       rect:
         serializedVersion: 2
-        x: 60
+        x: 80
         y: 0
-        width: 30
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5e08649d54d84370800000000000000
-      internalID: 8307123011071774300
+      spriteID: 9a8e4211635da2210800000000000000
+      internalID: 1309093069897132201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-death-Sheet_3
+      name: player-novo-attack-air_3
       rect:
         serializedVersion: 2
-        x: 90
+        x: 120
         y: 0
-        width: 30
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fe5363114c47bc70800000000000000
-      internalID: 8986735423822978805
+      spriteID: 94c29c5c3d3b76e50800000000000000
+      internalID: 6802603484304190537
       vertices: []
       indices: 
       edges: []
@@ -200,7 +206,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 864f3617e1eb8594baa41cb79be3fb13
+    spriteID: cd440449f116708489dd962bd5761e0e
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +216,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":30.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.25,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      player-death-Sheet_0: -8402819774039118711
-      player-death-Sheet_1: 647999314010606684
-      player-death-Sheet_2: 8307123011071774300
-      player-death-Sheet_3: 8986735423822978805
+      player-novo-attack-air_0: -7704391666933158151
+      player-novo-attack-air_1: 653135909854940434
+      player-novo-attack-air_2: 1309093069897132201
+      player-novo-attack-air_3: 6802603484304190537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

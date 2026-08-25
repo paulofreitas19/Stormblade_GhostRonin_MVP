@@ -167,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
                 airAttackLockedSpeedX = Mathf.Min(0f, airAttackLockedSpeedX);
         }
 
-        else if(!isAirAttackActive && wasAirAttackActiveLastFrame)
+        if (landedThisFrame)
         {
             airAttackLockedDirection = 0;
             airAttackLockedSpeedX = 0f;
@@ -190,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleHorizontalMovement()
     {
-        if (playerCombat != null && playerCombat.IsAirAttackActive)
+        if(airAttackLockedDirection != 0 && !isGrounded)
         {
             HandleAirAttackHorizontalMovement();
             return;
@@ -209,6 +209,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         float filteredMoveInputX = GetFilteredMoveInputX();
+
         rb.linearVelocity = new Vector2(filteredMoveInputX * moveSpeed, rb.linearVelocity.y);
     }
 
@@ -326,6 +327,9 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         if (playerCombat != null && playerCombat.IsAttacking)
+            return;
+
+        if(airAttackLockedDirection != 0 && !isGrounded)
             return;
 
         if (isCrouching)

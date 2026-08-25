@@ -7070,7 +7070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1027509997
@@ -7891,6 +7891,7 @@ MonoBehaviour:
   airAttackHitboxRadius: 0.8
   airAttackHitboxOffset: {x: -0.91, y: 0}
   isAttacking: 0
+  airAttackUsedThisAirborne: 0
   currentAttackType: 0
   airAttackLockedDirection: 0
 --- !u!114 &1230133749

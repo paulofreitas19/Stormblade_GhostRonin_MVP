@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: db0c1b20ca3eb0147b3403c895105c14
+guid: 105bc63098d4c504d82bb45acc42c4b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2465041226577951301
-    second: player-basic-attack-Sheet_0
+      213: 4862411202067729293
+    second: player-novo-attack-crouch_0
   - first:
-      213: -2325868613904003863
-    second: player-basic-attack-Sheet_1
+      213: -7006734609291477858
+    second: player-novo-attack-crouch_1
   - first:
-      213: 3019374223972936734
-    second: player-basic-attack-Sheet_2
+      213: 3294461208345579063
+    second: player-novo-attack-crouch_2
   - first:
-      213: -1336726894454276013
-    second: player-basic-attack-Sheet_3
+      213: -1707870268464009056
+    second: player-novo-attack-crouch_3
   - first:
-      213: -8045521892020162042
-    second: player-basic-attack-Sheet_4
+      213: -5631136712989188101
+    second: player-novo-attack-crouch_4
   - first:
-      213: -3864559989245986450
-    second: player-basic-attack-Sheet_5
+      213: 9138139105730762374
+    second: player-novo-attack-crouch_5
   - first:
-      213: -1757916189133036108
-    second: player-basic-attack-Sheet_6
-  - first:
-      213: 7966692605288245337
-    second: player-basic-attack-Sheet_7
+      213: 5542251523351290030
+    second: player-novo-attack-crouch_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,177 +118,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_0
+      name: player-novo-attack-crouch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb5c025901a6acdd0800000000000000
-      internalID: -2465041226577951301
+      spriteID: d8b8023e931ca7340800000000000000
+      internalID: 4862411202067729293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_1
+      name: player-novo-attack-crouch_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ec850291dad8bfd0800000000000000
-      internalID: -2325868613904003863
+      spriteID: e9cfeb10ff313ce90800000000000000
+      internalID: -7006734609291477858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_2
+      name: player-novo-attack-crouch_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1ca0effbd8f6e920800000000000000
-      internalID: 3019374223972936734
+      spriteID: 73e0eb1a30748bd20800000000000000
+      internalID: 3294461208345579063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_3
+      name: player-novo-attack-crouch_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3508756c8fdf27de0800000000000000
-      internalID: -1336726894454276013
+      spriteID: 0a070cd1a0d6c48e0800000000000000
+      internalID: -1707870268464009056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_4
+      name: player-novo-attack-crouch_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60272895770985090800000000000000
-      internalID: -8045521892020162042
+      spriteID: bff5e9c9efe2ad1b0800000000000000
+      internalID: -5631136712989188101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_5
+      name: player-novo-attack-crouch_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e693ec34a235e5ac0800000000000000
-      internalID: -3864559989245986450
+      spriteID: 6861039c91131de70800000000000000
+      internalID: 9138139105730762374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-basic-attack-Sheet_6
+      name: player-novo-attack-crouch_6
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b521d13a80aa97e0800000000000000
-      internalID: -1757916189133036108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-basic-attack-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 40
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 958efe417b06f8e60800000000000000
-      internalID: 7966692605288245337
+      spriteID: ea0a83975680aec40800000000000000
+      internalID: 5542251523351290030
       vertices: []
       indices: 
       edges: []
@@ -300,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8f7aac2cd2d81624e972ea42e0179e89
+    spriteID: adc70c912cfe8034b8538be6c3268a38
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +285,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.25,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      player-basic-attack-Sheet_0: -2465041226577951301
-      player-basic-attack-Sheet_1: -2325868613904003863
-      player-basic-attack-Sheet_2: 3019374223972936734
-      player-basic-attack-Sheet_3: -1336726894454276013
-      player-basic-attack-Sheet_4: -8045521892020162042
-      player-basic-attack-Sheet_5: -3864559989245986450
-      player-basic-attack-Sheet_6: -1757916189133036108
-      player-basic-attack-Sheet_7: 7966692605288245337
+      player-novo-attack-crouch_0: 4862411202067729293
+      player-novo-attack-crouch_1: -7006734609291477858
+      player-novo-attack-crouch_2: 3294461208345579063
+      player-novo-attack-crouch_3: -1707870268464009056
+      player-novo-attack-crouch_4: -5631136712989188101
+      player-novo-attack-crouch_5: 9138139105730762374
+      player-novo-attack-crouch_6: 5542251523351290030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

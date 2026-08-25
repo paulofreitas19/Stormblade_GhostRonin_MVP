@@ -22,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Attack State")]
     [SerializeField] private bool isAttacking;
+    [SerializeField] private bool airAttackUsedThisAirborne;
 
     [SerializeField] private AttackType currentAttackType = AttackType.None;
 
@@ -100,12 +101,25 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
+        ResetAirAttackOnLanding();
+
         HandleAttackRequest();
 
         if (playerMovement != null)
         {
             UpdateAttackHitboxDirection(playerMovement.IsFacingRight);
         }
+    }
+
+    private void ResetAirAttackOnLanding()
+    {
+        if(playerMovement == null)
+            return;
+
+        if(!playerMovement.LandedThisFrame)
+            return;
+
+        airAttackUsedThisAirborne = false;
     }
 
     private void HandleAttackRequest()
@@ -156,18 +170,20 @@ public class PlayerCombat : MonoBehaviour
         if (isAttacking)
             return;
 
+        if(airAttackUsedThisAirborne)
+            return;
+
         ApplyHitboxShape(
             airAttackHitboxRadius,
             GetFacingAdjustedOffset(airAttackHitboxOffset)
         );
 
         currentAttackType = AttackType.Air;
-
         isAttacking = true;
 
+        airAttackUsedThisAirborne = true;
+
         airAttackLockedDirection = playerMovement != null && playerMovement.IsFacingRight ? 1 : -1;
-
-
 
         if (playerAnimationController != null)
             playerAnimationController.PlayAirAttack();
