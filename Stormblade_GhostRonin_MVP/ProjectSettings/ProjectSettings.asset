@@ -687,7 +687,7 @@ PlayerSettings:
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Stormblade_GhostRonin_MVP
-  organizationId: 
+  organizationId: unity_cba6fad37d23932bb9f5
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

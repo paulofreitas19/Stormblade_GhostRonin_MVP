@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class PlayerAnimationController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerAnimationController : MonoBehaviour
     [Header("Air State Timing")]
     [SerializeField] private float jumpStartHoldTime = 0.10f;
     [SerializeField] private float jumpLandingHoldTime = 0.8f;
+
+    public event Action OnDeathTransitionPoint;
     
     private static readonly int BaseStateHash = Animator.StringToHash("baseState");
     private static readonly int AttackHash = Animator.StringToHash("attackBasic");
@@ -219,6 +222,11 @@ public class PlayerAnimationController : MonoBehaviour
 
         health.OnDamaged -= HandleDamageAnimation;
         health.OnDied -= HandleDeathAnimation;
+    }
+
+    public void AnimationEvent_DeathTransitionPoint()
+    {
+        OnDeathTransitionPoint?.Invoke();
     }
 
 }

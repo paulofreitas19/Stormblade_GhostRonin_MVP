@@ -11,10 +11,17 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private GameObject actions;
     [SerializeField] private GameOverBackgroundTransition backgroundTransition;
+    [SerializeField] private PlayerAnimationController animationController;
+    [SerializeField] private ScreenFadeController screenFade;
 
     private bool isTransitioning;
+    private bool gameOverPending;
+    private bool gameOverPresentationStarted;
 
-    [SerializeField] private float letterDelay = 0.08f;
+    [SerializeField] private float letterDelay = 0.09f;
+
+    [SerializeField] private float fadeToBlackDuration = 0.5f;
+    [SerializeField] private float fadeFromBlackDuration = 0.35f;
 
     private void Awake()
     {
@@ -25,7 +32,10 @@ public class GameOverUI : MonoBehaviour
     private void OnEnable()
     {
         if(playerLifePoints != null)
-            playerLifePoints.OnGameOver += ShowGameOver;
+            playerLifePoints.OnGameOver += HandleGameOver;
+
+        if(animationController != null)
+            animationController.OnDeathTransitionPoint += BeginGameOverTransition;
 
         if(backgroundTransition != null)
             backgroundTransition.OnTransitionFinished += RealoadCurrentScene;
@@ -34,22 +44,13 @@ public class GameOverUI : MonoBehaviour
     private void OnDisable()
     {
         if(playerLifePoints != null)
-            playerLifePoints.OnGameOver -= ShowGameOver;
+            playerLifePoints.OnGameOver -= HandleGameOver;
+
+        if(animationController != null)
+            animationController.OnDeathTransitionPoint -= BeginGameOverTransition;
 
         if(backgroundTransition != null)
             backgroundTransition.OnTransitionFinished -= RealoadCurrentScene;
-    }
-
-    private void ShowGameOver()
-    {
-        if(gameOverPanel == null)
-            return;
-
-        gameOverPanel.SetActive(true);
-
-        actions.SetActive(false);
-
-        StartCoroutine(RevealGameOverText());
     }
 
     public void ContinueGame()
@@ -93,5 +94,43 @@ public class GameOverUI : MonoBehaviour
         }
 
         actions.SetActive(true);
+    }
+
+    private void HandleGameOver()
+    {
+        gameOverPending = true;
+    }
+
+    private void BeginGameOverTransition()
+    {
+        if(!gameOverPending)
+            return;
+
+        if(gameOverPresentationStarted)
+            return;
+
+        gameOverPresentationStarted = true;
+
+        StartCoroutine(GameOverTransitionRoutine());
+    }
+
+    private IEnumerator GameOverTransitionRoutine()
+    {
+        if(screenFade != null)
+            yield return screenFade.FadeTo(1f, fadeToBlackDuration);
+
+        if(gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+
+        if(actions != null)
+            actions.SetActive(false);
+        
+        if(gameOverText != null)
+            gameOverText.maxVisibleCharacters = 0;
+
+        if(screenFade != null)
+            yield return screenFade.FadeTo(0f, fadeFromBlackDuration);
+
+        StartCoroutine(RevealGameOverText());
     }
 }
