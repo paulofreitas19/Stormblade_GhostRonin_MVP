@@ -20,9 +20,11 @@ public class PlayerRespawnController : MonoBehaviour
 
     [Header("Respawn State")]
     [SerializeField] private bool respawnPending;
+    [SerializeField] private bool isRespawning;
 
     public Transform CurrentRespawnPoint => currentRespawnPoint;
     public bool RespawnPending => respawnPending;
+    public bool IsRespawning => isRespawning;
 
     private void Awake()
     {
@@ -50,18 +52,21 @@ public class PlayerRespawnController : MonoBehaviour
 
         currentRespawnPoint = initialRespawnPoint;
         respawnPending = false;
+        isRespawning = false;
     }
 
     private void OnEnable()
     {
         if(health != null)
             health.OnDied += HandlePlayerDeath;
+
     }
 
     private void OnDisable()
     {
         if(health != null)
             health.OnDied -= HandlePlayerDeath;
+
     }
 
     public void SetCheckpoint(Transform newRespawnPoint)
@@ -124,7 +129,8 @@ public class PlayerRespawnController : MonoBehaviour
         if(rb == null)
             return;
 
-        rb.linearVelocity = Vector2.zero;
+        BeginRespawnLock();
+
         rb.position = currentRespawnPoint.position;
 
         if(cameraTargetController != null)
@@ -133,10 +139,7 @@ public class PlayerRespawnController : MonoBehaviour
         health.ResetHealth();
 
         if(animationController != null)
-            animationController.ResetDeathAnimation();
-
-        if(inputReader != null)
-            inputReader.ClearActionRequests();
+            animationController.PlayRespawn();
 
         lifePoints.PrepareForNextLife();
 
@@ -144,5 +147,36 @@ public class PlayerRespawnController : MonoBehaviour
 
         Debug.Log($"Player respawnado em: {currentRespawnPoint.name} | " + $"Vida restaurada: {health.CurrentHealth}");
     }
+
+    public void BeginRespawnLock()
+    {
+        isRespawning = true;
+
+        if(inputReader != null)
+            inputReader.SetGamePlayInputBlocked(true);
+        
+        if(rb != null)
+            rb.linearVelocity = Vector2.zero;
+
+        Debug.Log($"[RESPAWN LOCK] Ativado | frame {Time.frameCount}");
+    }
+
+    public void FinishRespawnLock()
+    {
+        if(!isRespawning)
+            return;
+
+        if(inputReader != null)
+            inputReader.ClearActionRequests();
+
+        isRespawning = false;
+
+        if(inputReader != null)
+            inputReader.SetGamePlayInputBlocked(false);
+
+        Debug.Log($"[RESPAWN LOCK] Desativado | frame {Time.frameCount}");
+    }
+
+
 
 }

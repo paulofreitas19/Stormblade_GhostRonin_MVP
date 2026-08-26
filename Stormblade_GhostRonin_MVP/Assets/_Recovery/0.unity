@@ -7794,6 +7794,7 @@ MonoBehaviour:
   cameraTargetController: {fileID: 412040171}
   playerCombat: {fileID: 1230133748}
   health: {fileID: 1230133747}
+  respawnController: {fileID: 1230133753}
   bodyCollider: {fileID: 1566280959}
   standingColliderSize: {x: 0.8, y: 1.55}
   standingColliderOffset: {x: 0, y: 0}
@@ -7980,6 +7981,7 @@ MonoBehaviour:
   currentRespawnPoint: {fileID: 0}
   respawnDelay: 1
   respawnPending: 0
+  isRespawning: 0
 --- !u!1 &1253099497
 GameObject:
   m_ObjectHideFlags: 0

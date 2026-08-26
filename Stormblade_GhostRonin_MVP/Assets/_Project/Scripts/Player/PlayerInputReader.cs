@@ -16,6 +16,10 @@ public class PlayerInputReader : MonoBehaviour
     [SerializeField] private bool specialRequested;
     [SerializeField] private bool isCrouchHeld;
 
+    [Header("Input State")]
+    [SerializeField] private bool gameplayInputBlocked;
+
+    public bool GameplayInputBlocked => gameplayInputBlocked;
     public float MoveInputX => moveInputX;
     public bool JumpRequested => jumpRequested;
     public bool AttackRequested => attackRequested;
@@ -80,6 +84,12 @@ public class PlayerInputReader : MonoBehaviour
 
     private void Update()
     {
+        if (gameplayInputBlocked)
+        {
+            ClearGameplayInputState();
+            return;
+        }
+        
         ReadMoveInput();
         ReadJumpInput();
         ReadAttackInput();
@@ -180,6 +190,22 @@ public class PlayerInputReader : MonoBehaviour
     {
         jumpRequested = false;
         attackRequested = false;
+    }
+
+    public void SetGamePlayInputBlocked(bool blocked)
+    {
+        gameplayInputBlocked = blocked;
+
+        if(blocked)
+            ClearGameplayInputState();
+    }
+
+    private void ClearGameplayInputState(){
+        moveInputX = 0f;
+        jumpRequested = false;
+        attackRequested = false;
+        specialRequested = false;
+        isCrouchHeld = false;
     }
 
 }

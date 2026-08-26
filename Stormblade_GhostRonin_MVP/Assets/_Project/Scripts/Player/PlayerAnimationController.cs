@@ -8,6 +8,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerCombat playerCombat;
     [SerializeField] private Health health;
+    [SerializeField] private PlayerRespawnController respawnController;
 
     [Header("Air State Timing")]
     [SerializeField] private float jumpStartHoldTime = 0.10f;
@@ -21,6 +22,7 @@ public class PlayerAnimationController : MonoBehaviour
     private static readonly int AirAttackHash = Animator.StringToHash("attackAir");
     private static readonly int IsDeadHash = Animator.StringToHash("isDead");
     private static readonly int HitHash = Animator.StringToHash("hit");
+    private static readonly int RespawnHash = Animator.StringToHash("respawn");
 
     private PlayerBaseState currentBaseState = PlayerBaseState.Idle;
 
@@ -31,6 +33,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Awake()
     {
+        if(respawnController == null)
+            respawnController = GetComponentInParent<PlayerRespawnController>();
         if (animator == null)
             animator = GetComponent<Animator>();
 
@@ -41,6 +45,9 @@ public class PlayerAnimationController : MonoBehaviour
     private void Update()
     {
         if(health != null && health.IsDead)
+            return;
+        
+        if(IsRespawning())
             return;
         
         UpdateBaseState();
@@ -154,6 +161,9 @@ public class PlayerAnimationController : MonoBehaviour
     {
         if (animator == null)
             return;
+        
+        if(IsRespawning())
+            return;
 
         animator.SetTrigger(AttackHash);
     }
@@ -189,12 +199,18 @@ public class PlayerAnimationController : MonoBehaviour
         if (animator == null)
             return;
 
+        if(IsRespawning())
+            return;
+
         animator.SetTrigger(CrouchAttackHash);
     }
 
     public void PlayAirAttack()
     {
         if (animator == null)
+            return;
+
+        if(IsRespawning())
             return;
 
         animator.SetTrigger(AirAttackHash);
@@ -227,6 +243,29 @@ public class PlayerAnimationController : MonoBehaviour
     public void AnimationEvent_DeathTransitionPoint()
     {
         OnDeathTransitionPoint?.Invoke();
+    }
+
+    public void PlayRespawn()
+    {
+        if(animator == null)
+            return;
+
+        deathAnimationStarted = false;
+
+        animator.ResetTrigger(AttackHash);
+        animator.ResetTrigger(CrouchAttackHash);
+        animator.ResetTrigger(AirAttackHash);
+        animator.ResetTrigger(HitHash);
+
+        animator.SetBool(IsDeadHash, false);
+        animator.SetTrigger(RespawnHash);
+
+        Debug.Log("PlayerAnimationController: Respawn iniciado.");
+    }
+
+    private bool IsRespawning()
+    {
+        return respawnController != null && respawnController.IsRespawning;
     }
 
 }

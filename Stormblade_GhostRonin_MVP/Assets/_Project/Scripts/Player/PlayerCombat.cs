@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerAnimationController playerAnimationController;
     [SerializeField] private Health health;
+    [SerializeField] private PlayerRespawnController respawnController;
 
     [Header("Attack References")]
     [SerializeField] private Hitbox attackHitbox;
@@ -45,25 +46,20 @@ public class PlayerCombat : MonoBehaviour
     //belly e daniel estiveram aqui
     private void Awake()
     {
+        if(respawnController == null)
+            respawnController = GetComponent<PlayerRespawnController>();
+
         if (attackHitbox == null)
-        {
             Debug.LogWarning($"{gameObject.name}: attackHitbox n�o foi atribu�do no PlayerCombat.");
-        }
 
         if (playerInputReader == null)
-        {
             Debug.LogWarning($"{gameObject.name}: playerInputReader n�o foi atribu�do no PlayerCombat.");
-        }
 
         if (playerMovement == null)
-        {
             Debug.LogWarning($"{gameObject.name}: playerMovement n�o foi atribu�do no PlayerCombat");
-        }
 
         if (playerAnimationController == null)
-        {
             Debug.LogWarning($"{gameObject.name}: playerAnimationController n�o foi atribu�do no PlayerCombat");
-        }
 
         DisableAttackHitbox();
 
@@ -73,9 +69,7 @@ public class PlayerCombat : MonoBehaviour
         }
 
         if (playerMovement != null)
-        {
             UpdateAttackHitboxDirection(playerMovement.IsFacingRight);
-        }
     }
 
     private void ForceStopCombatOnDeath()
@@ -101,14 +95,33 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        ResetAirAttackOnLanding();
+        if (IsRespawning())
+        {
+            ForceStopCombatDuringRespawn();
 
+            if(playerInputReader != null)
+                playerInputReader.ConsumeAttackRequest();
+
+            return;
+        }
+
+        ResetAirAttackOnLanding();
         HandleAttackRequest();
 
         if (playerMovement != null)
         {
             UpdateAttackHitboxDirection(playerMovement.IsFacingRight);
         }
+    }
+
+    private void ForceStopCombatDuringRespawn()
+    {
+        if(attackHitbox != null)
+            attackHitbox.DisableHitbox();
+
+        isAttacking = false;
+        currentAttackType = AttackType.None;
+        airAttackLockedDirection = 0;
     }
 
     private void ResetAirAttackOnLanding()
@@ -329,6 +342,11 @@ public class PlayerCombat : MonoBehaviour
         return baseOffset;
     }
 
+    private bool IsRespawning()
+    {
+        return respawnController != null && respawnController.IsRespawning;
+    }
+
     public enum AttackType
     {
         None,
@@ -336,6 +354,5 @@ public class PlayerCombat : MonoBehaviour
         Crouch,
         Air
     }
-
 
 }

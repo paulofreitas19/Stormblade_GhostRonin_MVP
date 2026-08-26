@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CameraTargetController cameraTargetController;
     [SerializeField] private PlayerCombat playerCombat;
     [SerializeField] private Health health;
+    [SerializeField] private PlayerRespawnController respawnController;
 
     [Header("Body Collider")]
     [SerializeField] private CapsuleCollider2D bodyCollider;
@@ -92,6 +93,12 @@ public class PlayerMovement : MonoBehaviour
         return health != null && health.IsDead;
     }
 
+    private void Awake()
+    {
+        if(respawnController == null)
+            respawnController = GetComponent<PlayerRespawnController>();
+    }
+
     private void Start()
     {
         ApplyStandingBodyCollider();
@@ -110,6 +117,14 @@ public class PlayerMovement : MonoBehaviour
         if (IsDead())
         {
             StopMovementOnDeath();
+            UpdateBodyColliderForCrouch();
+            UpdateHurtboxForCrouch();
+            return;
+        }
+
+        if (IsRespawning())
+        {
+            StopMovementDuringRespawn();
             UpdateBodyColliderForCrouch();
             UpdateHurtboxForCrouch();
             return;
@@ -135,6 +150,12 @@ public class PlayerMovement : MonoBehaviour
         if (IsDead())
         {
             StopMovementOnDeath();
+            return;
+        }
+
+        if(IsRespawning())
+        {
+            StopMovementDuringRespawn();
             return;
         }
 
@@ -551,5 +572,20 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return true;
+    }
+
+    private bool IsRespawning()
+    {
+        return respawnController != null && respawnController.IsRespawning;
+    }
+
+    private void StopMovementDuringRespawn()
+    {
+        moveInputX = 0f;
+        isCrouching = false;
+        enteredCrouchThisFrame = false;
+
+        if(rb != null)
+            rb.linearVelocity = Vector2.zero;
     }
 }
